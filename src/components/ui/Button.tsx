@@ -1,15 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ReactNode, ButtonHTMLAttributes } from 'react';
+import { ReactNode } from 'react';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'ghost';
   children: ReactNode;
+  className?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 /** Styled button with animation variants */
-export default function Button({ variant = 'primary', children, className = '', ...props }: ButtonProps) {
+export default function Button({ variant = 'primary', children, className = '', onClick, disabled, type = 'button' }: ButtonProps) {
   const base = 'px-8 py-3.5 rounded-full font-semibold text-base cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-2';
 
   const variants: Record<string, string> = {
@@ -23,7 +27,9 @@ export default function Button({ variant = 'primary', children, className = '', 
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.97 }}
       className={`${base} ${variants[variant]} ${className}`}
-      {...props}
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
     >
       {children}
     </motion.button>
