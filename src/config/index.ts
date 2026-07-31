@@ -3,7 +3,10 @@ export const SITE_CONFIG = {
   UNLOCK_DATE: new Date('2025-08-12T00:00:00'),
   SITE_TITLE: 'A Special Story ❤️',
   SITE_DESCRIPTION: 'An interactive love story',
-  REVIEW_PASSWORDS: ['preview2025', 'love2025', 'bestfriend2025'],
+  // Admin passwords (full access: manage + view)
+  ADMIN_PASSWORDS: ['admin2025'],
+  // User passwords (one-time view only, expires after use)
+  USER_PASSWORDS: ['preview2025', 'love2025', 'bestfriend2025'],
   RECORDING: {
     VIDEO_BITS_PER_SECOND: 2_500_000,
     AUDIO_BITS_PER_SECOND: 128_000,
