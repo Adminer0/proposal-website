@@ -1,0 +1,17 @@
+{
+  "name": "A Special Story ❤️",
+  "short_name": "Proposal",
+  "description": "An interactive love story",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#FFB3BA",
+  "theme_color": "#FFB3BA",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
