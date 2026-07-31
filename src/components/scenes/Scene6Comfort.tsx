@@ -20,7 +20,7 @@ export default function Scene6Comfort({ onComplete }: Props) {
   // Lamp glow animation
   useEffect(() => {
     if (!lampRef.current) return;
-    gsap.to(lampRef.current, { opacity: [0.6, 0.9, 0.6], duration: 2, repeat: -1, ease: 'sine.inOut' });
+    gsap.to(lampRef.current, { opacity: 0.9, duration: 1, repeat: -1, yoyo: true, ease: 'sine.inOut' });
   }, []);
 
   // Show question after 3s
